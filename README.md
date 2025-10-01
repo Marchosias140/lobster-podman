@@ -6,7 +6,7 @@ Build it and run it!
 
 
 
-```sudo xhost + local:podman'```
+```sudo xhost + local:podman```
 
 
 
