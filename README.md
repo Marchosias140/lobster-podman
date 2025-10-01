@@ -1,3 +1,24 @@
+lobster for Podman!
+Build it and run it!
+
+```sudo podman build -t lobster1 .```
+
+
+
+
+```sudo xhost + local:podman'```
+
+
+
+
+```sudo podman run --device /dev/snd -it --rm  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix:Z  --device /dev/dri -e  --net=host lobster1 ```
+
+
+GPU acceleration and sound through the sound card!
+
+Enjoy!
+
+
 ### Showcase
 
 https://github.com/justchokingaround/lobster/assets/44473782/d597335c-42a9-4e45-8948-122744aa5ca9
