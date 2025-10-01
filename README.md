@@ -1,10 +1,12 @@
 lobster for Podman!
-Build it and run it!
+Inside the ```podman``` folder there is a ```Dockerfile```!
+
+Build it:
 
 ```sudo podman build -t lobster1 .```
 
 
-
+Run it:
 
 ```sudo xhost + local:podman```
 
