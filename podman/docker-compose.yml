@@ -1,0 +1,19 @@
+version: '3'
+services:
+  lobster:
+    image: lobster
+    container_name: lobster
+    devices:
+      - /dev/snd
+      - /dev/dri
+    volumes:
+      - /run/user/1000/pulse:/run/user/1000/pulse:Z
+      - /dev/shm:/dev/shm:Z
+      - /tmp/.X11-unix:/tmp/.X11-unix:Z
+    environment:
+      - DISPLAY=$DISPLAY
+      - PULSE_SERVER=unix:/run/user/1000/pulse/native
+    network_mode: host
+    stdin_open: true
+    tty: true
+    restart: "no"
