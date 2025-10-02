@@ -1,9 +1,33 @@
 lobster for Podman!
+
+________________________________________________________________________________________________________________________________________________________________________________________
+
+Updates:
+
+
+
+-In process of removing unnecesary dependencies to make the file smaller.
+
+
+
+
+
+-Testing a compose file in order to make usage easier.
+
+
+
+_________________________________________________________________________________________________________________________________________________
+
+
+
+Instructions:
+
+
 Inside the ```podman``` folder there is a ```Dockerfile```!
 
 Build it:
 
-```sudo podman build -t lobster1 .```
+```sudo podman build -t lobster .```
 
 
 Run it:
