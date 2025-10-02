@@ -25,7 +25,7 @@ ________________________________________________________________________________
 Instructions:
 
 
-Inside the ```podman``` folder there is a ```Dockerfile```!
+Inside the ```podman``` folder there is a ```Dockerfile``` and its ```docker-compose.yml file!```!
 
 Build it:
 
