@@ -6,7 +6,7 @@ RUN mkdir /home/user
 
 WORKDIR /home/user
 
-RUN apt update && apt upgrade -y 
+RUN apt update && apt upgrade -y
 RUN apt install -y software-properties-common \
     findutils \
     coreutils \
@@ -23,6 +23,9 @@ RUN apt install -y software-properties-common \
     libadwaita-1-0 \
     libwebkit2gtk-4.1-0 \
     libgl1 \
+    libpulse0 \
+    pulseaudio-utils \
+    alsa-utils \
     libgl1-mesa-dri \
     at-spi2-core \
     dbus-x11 \
@@ -42,11 +45,13 @@ RUN apt install -y software-properties-common \
     aria2 \
     yt-dlp \
     && rm -rf /var/lib/apt/lists/*
+    
 
 RUN git clone https://github.com/justchokingaround/lobster.git
 WORKDIR /home/user/lobster
 RUN chmod +x lobster.sh
 RUN mv lobster.sh lobster
 RUN cp lobster /usr/bin
+WORKDIR /home/user
 
 CMD ["/usr/bin/lobster"]
