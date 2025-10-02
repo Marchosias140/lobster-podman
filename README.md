@@ -4,15 +4,17 @@ ________________________________________________________________________________
 
 Updates:
 
+- New compose file for easier management.
+
+
+
+
+
+
 
 
 -In process of removing unnecesary dependencies to make the file smaller.
 
-
-
-
-
--Testing a compose file in order to make usage easier.
 
 
 
@@ -27,6 +29,8 @@ Inside the ```podman``` folder there is a ```Dockerfile```!
 
 Build it:
 
+Make sure that the ```user``` inside the Dockerfile is the same as your host user.
+
 ```sudo podman build -t lobster .```
 
 
@@ -37,10 +41,17 @@ Run it:
 
 
 
-```sudo podman run --device /dev/snd -it --rm  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix:Z  --device /dev/dri -e  --net=host lobster1 ```
+```sudo podman compose up -d```
 
 
-GPU acceleration and sound through the sound card!
+
+```sudo podman exec lobster bash```
+
+
+```lobster```
+
+
+
 
 Enjoy!
 
