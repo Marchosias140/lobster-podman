@@ -13,7 +13,7 @@ Updates:
 
 
 
--In process of removing unnecesary dependencies to make the file smaller.
+-Removed many unncessary dependencies.
 
 
 
